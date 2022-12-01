@@ -24,11 +24,11 @@ const SiteHeader = ({ history }) => {
   const navigate = useNavigate();
 
   const menuOptions = [
-    { label: "Home", path: "/" },
-    { label: "Upcoming", path: "/movies/upcoming" },
-    { label: "Favourites", path: "/movies/favourites" },
-    { label: "Option 3", path: "/" },
-    { label: "Option 4", path: "/" },
+    { label: "Movies", path: "/" },
+    { label: "Upcoming Movies", path: "/movies/upcoming" },
+    { label: "Favourite Movies", path: "/movies/favourites" },
+    { label: "TV Shows", path: "/shows" },
+    { label: "Trending", path: "/" },
   ];
 
   const handleMenuSelect = (pageURL) => {
