@@ -14,32 +14,32 @@ import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
 import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
-import { MoviesContext } from "../../contexts/moviesContext";
+import { ShowsContext } from "../../contexts/showsContext";
 
 export default function ShowCard({ show, action }) {
-  const { favourites, addToFavourites } = useContext(MoviesContext);
+  //const { favourites, addToFavourites } = useContext(MoviesContext);
  
-   if (favourites.find((id) => id === show.id)) {
-     show.favourite = true;
-   } else {
-     show.favourite = false
-   }
+   //if (favourites.find((id) => id === show.id)) {
+   //  show.favourite = true;
+   //} else {
+   //  show.favourite = false
+   //}
  
-   const handleAddToFavourite = (e) => {
-     e.preventDefault();
-     addToFavourites(show);
-   };
+   //const handleAddToFavourite = (e) => {
+   //  e.preventDefault();
+   //  addToFavourites(show);
+   //};
  
    return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-          show.favourite ? (
-            <Avatar sx={{ backgroundColor: 'red' }}>
-              <FavoriteIcon />
-            </Avatar>
-          ) : null
-        }
+        // avatar={
+        //   show.favourite ? (
+        //     <Avatar sx={{ backgroundColor: 'red' }}>
+        //       <FavoriteIcon />
+        //     </Avatar>
+        //   ) : null
+        // }
         title={
           <Typography variant="h5" component="p">
             {show.name}{" "}
@@ -69,15 +69,15 @@ export default function ShowCard({ show, action }) {
             </Typography>
           </Grid>
         </Grid>
-      </CardContent>
+        </CardContent>
       <CardActions disableSpacing>
-    {action(show)} 
-        <Link to={`/shows/${show.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
+      {action(show)}
+      <Link to={`/shows/${show.id}`}>
+      <Button variant="outlined" size="medium" color="primary">
             More Info ...
           </Button>
-        </Link>
-      </CardActions>
+          </Link>
+          </CardActions>
     </Card>
   );
 }
