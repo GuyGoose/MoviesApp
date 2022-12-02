@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from 'react-router-dom';
 import ShowDetails from "../components/showDetails";
 import PageTemplate from "../components/templateShowPage";
-import { getTVShows } from '../api/tmdb-api'
+import { getShow } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 
@@ -11,7 +11,7 @@ const ShowDetailsPage = (props) => {
 
   const { data: show, error, isLoading, isError } = useQuery(
     ["show", { id: id }],
-    getTVShows
+    getShow
   );
 
   if (isLoading) {

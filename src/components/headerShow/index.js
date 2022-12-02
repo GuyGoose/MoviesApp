@@ -27,7 +27,7 @@ const ShowHeader = (props) => {
       </IconButton>
 
       <Typography variant="h4" component="h3">
-        {show.title}
+        {show.name}
         <a href={show.homepage}>
           <HomeIcon color="primary" />
         </a>

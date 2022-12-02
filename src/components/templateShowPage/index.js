@@ -1,5 +1,5 @@
 import React from "react";
-import MovieHeader from "../headerMovie";
+import ShowHeader from "../headerShow";
 import Grid from "@mui/material/Grid";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
@@ -24,7 +24,7 @@ const TemplateShowPage = ({ show, children }) => {
 
   return (
     <>
-      <MovieHeader show={show} />
+      <ShowHeader show={show} />
 
       <Grid container spacing={5} sx={{ padding: "15px" }}>
         <Grid item xs={3}>
