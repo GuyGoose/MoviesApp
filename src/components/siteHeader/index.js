@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+//import DropdownState, { dropTrigger, dropMenu } from 'material-ui-popup-state';
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
@@ -28,7 +29,7 @@ const SiteHeader = ({ history }) => {
     { label: "Upcoming Movies", path: "/movies/upcoming" },
     { label: "Favourite Movies", path: "/movies/favourites" },
     { label: "TV Shows", path: "/shows" },
-    { label: "Trending", path: "/" },
+    { label: "Top Rated TV Shows", path: "/shows/toprated" },
   ];
 
   const handleMenuSelect = (pageURL) => {
