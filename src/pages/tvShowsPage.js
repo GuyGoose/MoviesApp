@@ -5,9 +5,10 @@ import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
 
-const TVShows = (props) => {
+const TVShowsPage = (props) => {
 
   const {  data, error, isLoading, isError }  = useQuery('shows', getTVShows)
+
 
   if (isLoading) {
     return <Spinner />
@@ -17,6 +18,7 @@ const TVShows = (props) => {
     return <h1>{error.message}</h1>
   }  
   const shows = data.results;
+
 
   // Redundant, but necessary to avoid app crashing.
   const favourites = shows.filter(m => m.favourite)
@@ -33,4 +35,4 @@ const TVShows = (props) => {
     />
 );
 };
-export default TVShows;
+export default TVShowsPage;

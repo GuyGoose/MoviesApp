@@ -15,9 +15,9 @@ const ShowsContextProvider = (props) => {
   };
 
   // We will use this function in a later section
-  const removeFromFavourites = (movie) => {
+  const removeFromFavourites = (show) => {
     setFavourites( favourites.filter(
-      (mId) => mId !== movie.id
+      (mId) => mId !== show.id
     ) )
   };
 
