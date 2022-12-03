@@ -37,11 +37,11 @@ const App = () => {
             <Routes>
         <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
         <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage />} />
-        <Route exact path="/shows" element={<TVShowsPage />} />
+        <Route exact path="/shows/pg:pageNumber" element={<TVShowsPage />} />
         <Route exact path="/shows/toprated" element={<TopRatedShows />} />
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
         <Route path="/movies/:id" element={<MoviePage />} />
-        <Route path="/shows/:id" element={<ShowPage />} />
+        <Route path="/shows" element={<ShowPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={ <Navigate to="/movies" /> } />
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />

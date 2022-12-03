@@ -7,6 +7,7 @@ import { getShowImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 
+
 const TemplateShowPage = ({ show, children }) => {
   const { data , error, isLoading, isError } = useQuery(
     ["images", { id: show.id }],

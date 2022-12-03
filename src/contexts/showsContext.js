@@ -5,6 +5,16 @@ export const ShowsContext = React.createContext(null);
 const ShowsContextProvider = (props) => {
     const [favourites, setFavourites] = useState( [] )
     const [myReviews, setMyReviews] = useState( {} ) 
+    const [pageNumber, setPageNum] = useState([])
+    const [style, setStyle] = useState([])
+
+  const setSitePageNumber = (num) => {
+    setPageNum(num);
+  };
+
+  const setSitePageStyle = (style) => {
+    setStyle(style);
+  };
 
   const addToFavourites = (show) => {
     let newFavourites = [...favourites];
@@ -32,6 +42,10 @@ const ShowsContextProvider = (props) => {
         addToFavourites,
         removeFromFavourites,
         addReview,
+        pageNumber,
+        setSitePageNumber,
+        style,
+        setSitePageStyle
       }}
     >
       {props.children}

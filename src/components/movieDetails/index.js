@@ -83,7 +83,9 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         }}
       >
         <NavigationIcon />
+      <Typography variant="h5" component="h3">
         Reviews
+      </Typography>
       </Fab>
       <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <MovieReviews movie={movie} />
