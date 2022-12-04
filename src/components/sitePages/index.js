@@ -40,7 +40,7 @@ const Pages = (props) => {
 
 
       <Typography variant="h4" component="h3">
-        {title}
+        {pageNumber}
       </Typography>
       <IconButton aria-label="go forward" onClick={() => setPageNumber(1)}>
         <ArrowForward color="primary" fontSize="large" />

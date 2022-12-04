@@ -57,7 +57,7 @@ function ShowListPageTemplate({ shows, title, action }) {
           </Box>
         </Grid>
 
-        {/* <Fab
+        <Fab
           color="primary"
           variant="extended"
           onClick={() =>setDrawerOpen(true)}
@@ -68,7 +68,7 @@ function ShowListPageTemplate({ shows, title, action }) {
           }}
         >
           <Typography variant="h4" component="h3">
-            Filter
+            Search
           </Typography>
         </Fab>
 
@@ -82,7 +82,7 @@ function ShowListPageTemplate({ shows, title, action }) {
               />
             </Grid>
           </Grid>
-        </Drawer> */}
+        </Drawer>
 
       </Grid>
     </Grid>
