@@ -19,7 +19,7 @@ import { ShowsContext } from "../../contexts/showsContext";
 export default function ShowCard({ show, action }) {
   const { favourites, addToFavourites } = useContext(ShowsContext);
 
-  // console.log(show)
+  console.log(show)
  
    if (favourites.find((id) => id === show.id)) {
      show.favourite = true;

@@ -25,11 +25,11 @@ const SiteHeader = ({ history }) => {
   const navigate = useNavigate();
 
   const menuOptions = [
-    { label: "Movies", path: "/pg1" },
-    { label: "Upcoming Movies", path: "/movies/upcoming/pg1" },
+    { label: "Movies", path: "/" },
+    { label: "Upcoming Movies", path: "/movies/upcoming" },
     { label: "Favourite Movies", path: "/movies/favourites" },
     { label: "TV Shows", path: "/shows/pg1" },
-    { label: "Top Rated TV Shows", path: "/shows/toprated/pg1" },
+    { label: "Top Rated TV Shows", path: "/shows/toprated" },
   ];
 
   const handleMenuSelect = (pageURL) => {

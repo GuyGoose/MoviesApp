@@ -36,14 +36,14 @@ const App = () => {
           <ShowsContextProvider>
             <Routes>
         <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
-        <Route exact path="/movies/upcoming/pg:pageNumber" element={<UpcomingMoviesPage />} />
+        <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage />} />
         <Route exact path="/shows/pg:pageNumber" element={<TVShowsPage />} />
-        <Route exact path="/shows/toprated/pg:pageNumber" element={<TopRatedShows />} />
+        <Route exact path="/shows/toprated" element={<TopRatedShows />} />
         <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
         <Route path="/movies/:id" element={<MoviePage />} />
         <Route path="/shows" element={<ShowPage />} />
-        <Route path="/pg:pageNumber" element={<HomePage />} />
-        <Route path="*" element={ <Navigate to="/pg1" /> } />
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={ <Navigate to="/movies" /> } />
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
         </Routes>
         </ShowsContextProvider>
