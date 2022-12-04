@@ -1,14 +1,22 @@
-import React from "react";
+import React, {useContext} from "react";
 import { getTopRatedShows } from "../api/tmdb-api";
 import PageTemplate from '../components/templateShowList';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
 
+import { ShowsContext } from "../contexts/showsContext";
+import { useParams } from "react-router-dom";
+
 const TopRatedShowsPage = (props) => {
 
-  const {  data, error, isLoading, isError }  = useQuery('topratedshows', getTopRatedShows)
+  const {setSitePageNumber, setSitePageStyle} = useContext(ShowsContext);
+  const {pageNumber} = useParams();
 
+  //const {  data, error, isLoading, isError }  = useQuery('topratedshows', getTopRatedShows)
+  const {  data, error, isLoading, isError }  = useQuery([`pg${pageNumber}`,{pgNum:pageNumber}], getTopRatedShows)
+  setSitePageNumber(pageNumber);
+  setSitePageStyle('toprated')
 
   if (isLoading) {
     return <Spinner />

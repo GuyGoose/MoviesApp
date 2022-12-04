@@ -1,26 +1,26 @@
 import React, { useContext } from "react";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
-import { ShowsContext } from "../../contexts/showsContext";
+import { MoviesContext } from "../../contexts/moviesContext";
 import { Paper } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 
-const Pages = (props) => {
+const MoviePages = (props) => {
   const navigate = useNavigate();
-  const {pageNumber,style} = useContext(ShowsContext);
+  const {pageNumber,style} = useContext(MoviesContext);
 
   const setPageNumber = (pageNum) =>{
     const newPage = parseInt(pageNumber)+parseInt(pageNum)
     if(newPage<=0) return;
     var address = '';
     switch(style){
-      case 'shows':
-        address = '/shows/pg'
+      case 'movies':
+        address = '/pg'
         break;
-      case 'toprated':
-        address = '/toprated/pg'
+      case 'upcoming':
+        address = '/movies/upcoming/pg'
         break;
     }
     navigate(`${address}${newPage}`, { replace: true });
@@ -54,4 +54,4 @@ const Pages = (props) => {
 
 };
 
-export default Pages;
+export default MoviePages;
