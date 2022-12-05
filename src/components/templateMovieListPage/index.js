@@ -47,6 +47,7 @@ function MovieListPageTemplate({ movies, title, action }) {
           sx={{
             position: 'fixed',
             top: '5em',
+            backgroundColor: 'purple', color: 'yellow',
             right: '1em'
           }}
         >

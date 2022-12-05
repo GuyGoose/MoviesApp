@@ -42,7 +42,7 @@ const SiteHeader = ({ history }) => {
 
   return (
     <>
-      <AppBar position="fixed" color="secondary">
+      <AppBar position="fixed" color="secondary" sx={{ backgroundColor: 'purple', color: 'yellow' }}>
         <Toolbar>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
             AOK Media Emporium
