@@ -19,9 +19,6 @@ const Pages = (props) => {
       case 'shows':
         address = '/shows/pg'
         break;
-      case 'toprated':
-        address = '/toprated/pg'
-        break;
     }
     navigate(`${address}${newPage}`, { replace: true });
   }

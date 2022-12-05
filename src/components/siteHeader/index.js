@@ -29,7 +29,7 @@ const SiteHeader = ({ history }) => {
     { label: "Upcoming Movies", path: "/movies/upcoming" },
     { label: "Favourite Movies", path: "/movies/favourites" },
     { label: "TV Shows", path: "/shows/pg1" },
-    { label: "Top Rated TV Shows", path: "/shows/toprated/pg1" },
+    { label: "Top Rated TV Shows", path: "/shows/toprated" },
   ];
 
   const handleMenuSelect = (pageURL) => {
