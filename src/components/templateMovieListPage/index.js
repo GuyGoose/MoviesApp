@@ -28,7 +28,7 @@ function MovieListPageTemplate({ movies, title, action }) {
   };
 
   return (
-    <Grid container sx={{ padding: '20px'  }}>
+    <Grid container sx={{ padding: '20px' }}>
 
       <Grid item xs={12}>
         <Header title={title} />
@@ -47,7 +47,6 @@ function MovieListPageTemplate({ movies, title, action }) {
           sx={{
             position: 'fixed',
             top: '5em',
-            backgroundColor: 'purple', color: 'yellow', 
             right: '1em'
           }}
         >
@@ -58,7 +57,7 @@ function MovieListPageTemplate({ movies, title, action }) {
 
         <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
           <Grid item container spacing={5}>
-            <Grid key="find" item xs={12} sm={6} md={4} lg={3} xl={2}>
+            <Grid key="find" item xs={12}>
               <FilterCard
                 onUserInput={handleChange}
                 titleFilter={nameFilter}

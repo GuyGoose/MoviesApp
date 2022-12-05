@@ -17,26 +17,26 @@ import Avatar from '@mui/material/Avatar';
 import { ShowsContext } from "../../contexts/showsContext";
 
 export default function ShowCard({ show, action }) {
-  const { favouriteShows, addToFavouriteShows } = useContext(ShowsContext);
+  const { favourites, addToFavourites } = useContext(ShowsContext);
 
-  //console.log(show)
+  console.log(show)
  
-   if (favouriteShows.find((id) => id === show.id)) {
-     show.favouriteShows = true;
+   if (favourites.find((id) => id === show.id)) {
+     show.favourite = true;
    } else {
-     show.favouriteShows = false
+     show.favourite = false
    }
  
    const handleAddToFavourite = (e) => {
      e.preventDefault();
-     addToFavouriteShows(show);
+     addToFavourites(show);
    };
  
    return (
-    <Card sx={{ maxWidth: 345, backgroundColor: 'lightgrey'  }}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardHeader
          avatar={
-           show.favouriteShows ? (
+           show.favourite ? (
              <Avatar sx={{ backgroundColor: 'red' }}>
                <FavoriteIcon />
              </Avatar>

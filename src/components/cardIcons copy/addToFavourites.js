@@ -3,12 +3,12 @@ import { ShowsContext } from "../../contexts/showsContext";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-const AddToFavouritesIconShows = ({ show }) => {
+const AddToFavouritesIcon = ({ show }) => {
   const context = useContext(ShowsContext);
 
   const handleAddToFavourites = (e) => {
     e.preventDefault();
-    context.addToFavouriteShows(show);
+    context.addToFavourites(show);
   };
 
   return (
@@ -18,4 +18,4 @@ const AddToFavouritesIconShows = ({ show }) => {
   );
 };
 
-export default AddToFavouritesIconShows;
+export default AddToFavouritesIcon;
