@@ -60,10 +60,12 @@ function ShowListPageTemplate({ shows, title, action }) {
         <Fab
           color="primary"
           variant="extended"
+          
           onClick={() =>setDrawerOpen(true)}
           sx={{
             position: 'fixed',
             top: '5em',
+            backgroundColor: 'purple', color: 'yellow', 
             right: '1em'
           }}
         >

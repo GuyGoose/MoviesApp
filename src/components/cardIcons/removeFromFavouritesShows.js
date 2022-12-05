@@ -3,7 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { ShowsContext } from "../../contexts/showsContext";
 
-const RemoveFromFavouritesIcon = ({ show }) => {
+const RemoveFromFavouritesIconShows = ({ show }) => {
   const context = useContext(ShowsContext);
 
   const handleRemoveFromFavourites = (e) => {
@@ -20,4 +20,4 @@ const RemoveFromFavouritesIcon = ({ show }) => {
   );
 };
 
-export default RemoveFromFavouritesIcon;
+export default RemoveFromFavouritesIconShows;

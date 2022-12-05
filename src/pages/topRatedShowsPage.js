@@ -3,7 +3,7 @@ import { getTopRatedShows } from "../api/tmdb-api";
 import PageTemplate from '../components/templateShowList';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
-import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
+import AddToFavouritesIconShows from '../components/cardIcons/addToFavouritesShows';
 
 const TopRatedShowsPage = (props) => {
 
@@ -23,14 +23,14 @@ const TopRatedShowsPage = (props) => {
   // Redundant, but necessary to avoid app crashing.
   const favourites = shows.filter(m => m.favourite)
   localStorage.setItem('favourites', JSON.stringify(favourites))
-  const addToFavourites = (movieId) => true 
+  const addToFavourites = (showId) => true 
 
   return (
     <PageTemplate
       title="Top Rated TV Shows"
       shows={shows}
       action={(show) => {
-        return <AddToFavouritesIcon movie={show} />
+        return <AddToFavouritesIconShows movie={show} />
       }}
     />
 );

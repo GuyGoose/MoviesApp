@@ -27,7 +27,7 @@ const TemplateShowPage = ({ show, children }) => {
     <>
       <ShowHeader show={show} />
 
-      <Grid container spacing={5} sx={{ padding: "15px" }}>
+      <Grid container spacing={5} sx={{ padding: "15px"  }}>
         <Grid item xs={3}>
           <div sx={{
             display: "flex",

@@ -75,6 +75,7 @@ const ShowDetails = ({ show }) => {  // Don't miss this!
         sx={{
           position: 'fixed',
           bottom: '1em',
+          backgroundColor: 'purple', color: 'yellow', 
           right: '1em'
         }}
       >

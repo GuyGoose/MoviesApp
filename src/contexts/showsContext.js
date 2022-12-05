@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export const ShowsContext = React.createContext(null);
 
 const ShowsContextProvider = (props) => {
-    const [favourites, setFavourites] = useState( [] )
+    const [favouriteShows, setFavouriteShows] = useState( [] )
     const [myReviews, setMyReviews] = useState( {} ) 
     const [pageNumber, setPageNum] = useState([])
     const [style, setStyle] = useState([])
@@ -16,17 +16,17 @@ const ShowsContextProvider = (props) => {
     setStyle(style);
   };
 
-  const addToFavourites = (show) => {
-    let newFavourites = [...favourites];
-    if (!favourites.includes(show.id)) {
+  const addToFavouriteShows = (show) => {
+    let newFavourites = [...favouriteShows];
+    if (!favouriteShows.includes(show.id)) {
       newFavourites.push(show.id);
     }
-    setFavourites(newFavourites);
+    setFavouriteShows(newFavourites);
   };
 
   // We will use this function in a later section
   const removeFromFavourites = (show) => {
-    setFavourites( favourites.filter(
+    setFavouriteShows( favouriteShows.filter(
       (mId) => mId !== show.id
     ) )
   };
@@ -38,8 +38,8 @@ const ShowsContextProvider = (props) => {
   return (
     <ShowsContext.Provider
       value={{
-        favourites,
-        addToFavourites,
+        favouriteShows,
+        addToFavouriteShows,
         removeFromFavourites,
         addReview,
         pageNumber,

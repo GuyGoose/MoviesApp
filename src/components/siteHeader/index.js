@@ -30,6 +30,7 @@ const SiteHeader = ({ history }) => {
     { label: "Favourite Movies", path: "/movies/favourites" },
     { label: "TV Shows", path: "/shows/pg1" },
     { label: "Top Rated TV Shows", path: "/shows/toprated" },
+    { label: "Favourite TV Shows", path: "/shows/favourites" },
   ];
 
   const handleMenuSelect = (pageURL) => {
@@ -42,7 +43,7 @@ const SiteHeader = ({ history }) => {
 
   return (
     <>
-      <AppBar position="fixed" color="secondary">
+      <AppBar position="fixed" color="secondary" sx={{ backgroundColor: 'purple', color: 'yellow' }}>
         <Toolbar>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
             AOK Media Emporium

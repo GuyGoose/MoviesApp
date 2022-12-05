@@ -3,7 +3,8 @@ import {createRoot} from "react-dom/client";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
-import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
+import FavouriteMoviesPage from "./pages/favouriteMoviesPage";
+import FavouriteShowsPage from "./pages/favouriteShowsPage";
 import {Link} from 'react-router-dom'
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
@@ -36,6 +37,7 @@ const App = () => {
           <ShowsContextProvider>
             <Routes>
         <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
+        <Route exact path="/shows/favourites" element={<FavouriteShowsPage />} />
         <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage />} />
         <Route exact path="/shows/pg:pageNumber" element={<TVShowsPage />} />
         <Route exact path="/shows/toprated" element={<TopRatedShows />} />

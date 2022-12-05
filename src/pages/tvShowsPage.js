@@ -3,7 +3,7 @@ import { getTVShows } from "../api/tmdb-api";
 import PageTemplate from '../components/templateShowList';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
-import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
+import AddToFavouritesIconShows from '../components/cardIcons/addToFavouritesShows';
 import { ShowsContext } from "../contexts/showsContext";
 import { useParams } from "react-router-dom";
 
@@ -30,14 +30,14 @@ const TVShowsPage = (props) => {
   // Redundant, but necessary to avoid app crashing.
   const favourites = shows.filter(m => m.favourite)
   localStorage.setItem('favourites', JSON.stringify(favourites))
-  const addToFavourites = (movieId) => true 
+  const addToFavourites = (showId) => true 
 
   return (
     <PageTemplate
       title="Discover TV Shows"
       shows={shows}
       action={(show) => {
-        return <AddToFavouritesIcon movie={show} />
+        return <AddToFavouritesIconShows movie={show} />
       }}
     />
 );
