@@ -164,9 +164,11 @@ export const getMovie = (args) => {
       });
   };
 
-  export const getTopRatedShows = () => {
+  export const getTopRatedShows = (args) => {
+    const [, pageIdPart] = args.queryKey;
+    const { pgNum } = pageIdPart;
     return fetch(
-      `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=${pgNum}`
     ).then((response) => {
       if (!response.ok) {
         throw new Error(response.json().message);
